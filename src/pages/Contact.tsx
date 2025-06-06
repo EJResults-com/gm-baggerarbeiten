@@ -12,9 +12,11 @@ export const Contact: React.FC = () => {
       transition={{ duration: 0.5 }}
     >
       <ContactHeader />
-      <div className="grid grid-cols-1 lg:grid-cols-2">
-        <ContactForm />
-        <ContactInfo />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <ContactForm />
+          <ContactInfo />
+        </div>
       </div>
     </motion.div>
   );

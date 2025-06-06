@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Truck, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const services = [
@@ -27,8 +27,12 @@ export const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="p-2 bg-emerald-600 rounded-lg">
-                <Truck className="h-6 w-6 text-white" />
+              <div className="w-12 h-12 bg-emerald-600 rounded-lg flex items-center justify-center">
+                <img 
+                  src="https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=48&h=48&fit=crop" 
+                  alt="GM Baggerarbeiten Logo" 
+                  className="w-8 h-8 rounded object-cover"
+                />
               </div>
               <div>
                 <h3 className="font-bold text-lg">GM Baggerarbeiten</h3>
@@ -129,14 +133,11 @@ export const Footer: React.FC = () => {
               © 2024 GM Baggerarbeiten. Alle Rechte vorbehalten.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="#" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm">
+              <Link to="/impressum" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm">
                 Impressum
               </Link>
-              <Link to="#" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm">
+              <Link to="/datenschutz" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm">
                 Datenschutz
-              </Link>
-              <Link to="#" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm">
-                AGB
               </Link>
             </div>
           </div>

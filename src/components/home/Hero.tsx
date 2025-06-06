@@ -94,44 +94,16 @@ export const Hero: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator - Fixed positioning */}
       <motion.div
-  className="absolute inset-x-0 bottom-12 flex flex-col items-center justify-center text-white"
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1, delay: 1.5, repeat: Infinity, repeatType: 'reverse' }}
->
-  <ChevronDown className="h-8 w-8" />
-  <p className="text-sm mt-2 text-center">Scrollen Sie nach unten</p>
-</motion.div>
-
-
-      {/* Floating Elements */}
-      <motion.div
-        className="absolute top-1/4 left-10 w-4 h-4 bg-emerald-400 rounded-full opacity-60"
-        animate={{
-          y: [0, -20, 0],
-          opacity: [0.6, 1, 0.6],
-        }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
-      <motion.div
-        className="absolute top-1/3 right-20 w-6 h-6 bg-emerald-300 rounded-full opacity-40"
-        animate={{
-          y: [0, 30, 0],
-          opacity: [0.4, 0.8, 0.4],
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1,
-        }}
-      />
+        className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-center text-white"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 1.5, repeat: Infinity, repeatType: 'reverse' }}
+      >
+        <ChevronDown className="h-8 w-8" />
+        <p className="text-sm mt-2 text-center">Scrollen Sie nach unten</p>
+      </motion.div>
     </section>
   );
 };

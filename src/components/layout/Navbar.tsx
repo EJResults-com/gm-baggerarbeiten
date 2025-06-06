@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Menu, X, Truck } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,25 +37,17 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
+          <Link to="/" className="flex items-center group">
             <motion.div
               whileHover={{ scale: 1.1 }}
-              className="p-2 bg-emerald-600 rounded-lg"
+              className="w-12 h-12 bg-emerald-600 rounded-lg flex items-center justify-center"
             >
-              <Truck className="h-6 w-6 text-white" />
+              <img 
+                src="https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=48&h=48&fit=crop" 
+                alt="GM Baggerarbeiten Logo" 
+                className="w-8 h-8 rounded object-cover"
+              />
             </motion.div>
-            <div>
-              <span className={`font-bold text-lg ${
-                scrolled || !isHome ? 'text-gray-900' : 'text-white'
-              }`}>
-                GM Baggerarbeiten
-              </span>
-              <div className={`text-xs ${
-                scrolled || !isHome ? 'text-gray-600' : 'text-gray-200'
-              }`}>
-                Sinsheim
-              </div>
-            </div>
           </Link>
 
           {/* Desktop Navigation */}
